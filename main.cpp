@@ -4,12 +4,12 @@
 using namespace std;
 void BellmanFordRunner(void);
 void Dag_Shortest_Path_Runner(void);
+void DijkstraRunner(void);
 
 
 
 int main()
 {
-	Dag_Shortest_Path_Runner();
 
 }
 
@@ -32,4 +32,14 @@ void Dag_Shortest_Path_Runner(){
 	vector <Vertex> Output =  Dag_Shortest_Paths(G,1, Weight);
 	G.draw();
 	print_verteex_vector(Output);
+}
+
+void DijkstraRunner(){
+	pair <Graph, map <int, map<int, int> > > Input = Weighted_Graph_Input();
+	Graph G = Input.first;
+	map <int, map<int, int> > Weight = Input.second;
+	Dijkstra(G, 1, Weight);
+
+
+
 }

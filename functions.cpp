@@ -11,8 +11,9 @@ void print_vector(vector <int> A ){
 
 //size is n+1
 void print_verteex_vector(vector <Vertex> A ){
+	cout<<"---------------------------\nvertex vector is : \n";
 	for(int i = 1; i < A.size(); i++){
-		cout << " Vertex : " << i << "\tdistance : " << A[i].d << "\tpi : " <<A[i].pi<< endl;
+		cout << " Vertex : " << i << "\tdistance : " << A[i].d <<  endl;
 	}
 }
 
