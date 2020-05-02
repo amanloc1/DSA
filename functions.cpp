@@ -2,7 +2,7 @@
 #include "header.h"
 using namespace std;
 
-void print_vector(vector <int> A ){
+void print_vector(vi A ){
 
 	for(auto it : A)
 		cout<<it<< " ";
@@ -10,7 +10,7 @@ void print_vector(vector <int> A ){
 }
 
 //size is n+1
-void print_verteex_vector(vector <Vertex> A ){
+void print_verteex_vector(vv A ){
 	cout<<"---------------------------\nvertex vector is : \n";
 	for(int i = 1; i < A.size(); i++){
 		cout << " Vertex : " << i << "\tdistance : " << A[i].d <<  endl;
@@ -30,7 +30,7 @@ Weighted_Graph_Input(){
 	int u, v, w;
 	cout<<"Enter "<<m<<" triplets of integers u v w Edge(u,v) with weight w"<<endl;
 	Graph G(n);
-	map <int, map<int, int> > Weight;
+	mimii Weight;
 	
 	for(int i = 0; i < m; i++)
 	{

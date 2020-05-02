@@ -10,36 +10,41 @@ void DijkstraRunner(void);
 
 int main()
 {
-
+	// BellmanFordRunner();
+	// DijkstraRunner();
+	Dag_Shortest_Path_Runner();
 }
 
 void BellmanFordRunner(){
-	pair <Graph, map <int, map<int, int> > > Input = Weighted_Graph_Input();
+	cout<<"Runningg Bellman ford"<<endl;
+	pair <Graph, mimii > Input = Weighted_Graph_Input();
 	Graph G = Input.first;
-	map <int, map<int, int> > Weight = Input.second;
-	pair <bool, vector <Vertex>> Output =  Bellman_Ford(G,1, Weight);
+	mimii Weight = Input.second;
+	pair <bool, vv> Output =  Bellman_Ford(G,1, Weight);
 	bool success = Output.first;
-	vector <Vertex> V = Output.second;
+	vv V = Output.second;
 	G.draw();
 	cout<<success<<endl;
 	print_verteex_vector(V);
 }
 
 void Dag_Shortest_Path_Runner(){
-	pair <Graph, map <int, map<int, int> > > Input = Weighted_Graph_Input();
+	cout<<"Runningg Dag shortest path"<<endl;
+	pair <Graph, mimii > Input = Weighted_Graph_Input();
 	Graph G = Input.first;
-	map <int, map<int, int> > Weight = Input.second;
-	vector <Vertex> Output =  Dag_Shortest_Paths(G,1, Weight);
+	mimii Weight = Input.second;
+	vv Output =  Dag_Shortest_Paths(G,1, Weight);
 	G.draw();
 	print_verteex_vector(Output);
 }
 
 void DijkstraRunner(){
-	pair <Graph, map <int, map<int, int> > > Input = Weighted_Graph_Input();
+	cout<<"Runningg Dijkstra"<<endl;
+	pair <Graph, mimii > Input = Weighted_Graph_Input();
 	Graph G = Input.first;
-	map <int, map<int, int> > Weight = Input.second;
-	Dijkstra(G, 1, Weight);
-
-
+	mimii Weight = Input.second;
+	vv V = Dijkstra(G, 1, Weight);
+	G.draw();
+	print_verteex_vector(V);
 
 }
